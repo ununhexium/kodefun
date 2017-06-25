@@ -1,0 +1,87 @@
+title=Kode Fun
+date=2017-06-26
+type=post
+tags=blog
+status=published
+categories=blog
+author=Just Me
+~~~~~~
+
+<h1>Les outils</h1>
+
+<p>
+    Quel que soit votre systeme et le language de programmation que vous apprenez, il va falloir se munir des bons
+    outils pour programmer.
+</p>
+
+<h2>IntelliJ</h2>
+<p>
+    IntelliJ est un <acronym title="Integrated Development Environment">IDE</acronym> ou <acronym
+        title="Environnement de Developement Integre">EDI</acronym> en francais.
+    Le principe d'un IDE est de concentrer tous les outils necessaire a l'ecriture d'un programme en un seul editeur.
+    Cette caracteristique va notemment nous eviter d'avoir a utiliser des lignes de commande.
+</p>
+<p>
+    Il existe deux versions de cet outil. Une version gratuite (Community) largement suffisante pour nos besoins et une
+    version commerciale payante (Ultimate) dont les avantages sont interessants uniquement quand programmer devient
+    votre metier.
+</p>
+
+<h2>Un JDK</h2>
+<p>
+    Le <acronym title="Java Development Kit">JDK</acronym> est un ensemble d'outils qui vont etre utilises par IntelliJ
+    pour executer nos programmes.
+    Nous n'allons pas utiliser ces outils directement mais ils sont necessaires pour la suite.
+</p>
+
+<h1>L'installation</h1>
+
+<h2>Windows</h2>
+
+<ol>
+    <li>
+        <h3>JDK</h3>
+        <p>
+            Vous pouvez telecharger un JDK <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">ici</a>.
+            Suivez le lien qui va vers le telechargement du JDK.
+        </p>
+        <div class="warning">Le <acronym title="Java Runtime Environment">JRE</acronym> est suffisant pour executer les
+            programmes que l'on va creer mais ne permet pas de les construire. Choisissez bien un <strong>JDK</strong>.
+        </div>
+        <p>
+            Parmis les choix possibles, nous voulons un JDK pour windows. Il en existe deux versions: une pour Windows
+            64bits et 32bits. Si vous ne savez pas quelle version vous avez, vous pouvez prendre la version 32bits qui
+            fonctionnera aussi sur les systemes 64bits. Si vous souhaitez verifier quelles version vous avez, aller dans
+            <code>Panneau de configuration > Systeme et securite > System</code>
+        </p>
+        <p>
+            Installer le JDK. Les options par defaut conviendront parfaitement.
+        </p>
+    </li>
+    <li>
+        <h3>IntelliJ</h3>
+        <p>
+            Vous pouvez telecharger IntelliJ depuis le <a href="https://www.jetbrains.com/idea/">site officiel de
+            JetBrains</a>. Choisissez ensuite la <strong>Community Edition</strong>.
+        </p>
+        <p>
+            Vous pouvez maintenant l'installer. Toutes les options par defaut conviennent pour l'usage que nous allons
+            en faire.
+        </p>
+    </li>
+</ol>
+
+
+<h2>Linux</h2>
+
+<p>
+    Je vous invite a vous referer a votre gestionnaire de packages et a chercher les paquets du nom de Open JDK.
+    <acronym title="2017-06-25 11:24 GMT+2">Au moment</acronym> ou j'ecris ces lignes la version stable officielle est
+    le JDK 8.
+    Dans le cas des systeme bases sur Debian, le paquet se nomme <code>openjdk-8-<strong>jdk</strong></code>.
+    Il existe aussi un packet <code>openjdk-8-jre</code> qui ne contient que les outils pour executer (et non pas creer)
+    un programme et il n'est pas suffisant de faire du developpement avec.
+</p>
+
+
+<p class="sign"></p>

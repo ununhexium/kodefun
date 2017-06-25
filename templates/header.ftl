@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/main.css" />
     <link rel="stylesheet" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/add-on.css" />
     <link rel="stylesheet" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/monokai-sublime.css">
+    <link rel="stylesheet" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>css/kodefun.css">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
