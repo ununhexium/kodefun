@@ -1,0 +1,91 @@
+title=Comment savoir ce qu'est ma variable?
+date=2017-06-29
+type=post
+tags=kotlin,type
+status=published
+categories=blog
+author=Just Me
+~~~~~~
+
+<h1>Types de donnees</h1>
+
+<p>
+  Reprenons les exemples vus avec le <a href="27-REPL.html">REPL</a>.
+</p>
+
+
+<pre class="prettyprint">
+<code class="java"><span class="play">1+1</span>
+<span class="eq">2</span>
+
+<span class="play">1.0+1.0</span>
+<span class="eq">2.0</span>
+</code>
+</pre>
+
+<p>
+  Pour l'addition, on peut voir deux comportements differents.
+  Ils correspondent a deux types de donnees differentes.
+</p>
+
+<p>
+  Dans le premier cas, Kotlin interprete <code>1</code> comme un <abbr title="entier">integer</abbr>.
+  La somme de deux <abbr title="Abbreviation de 'integer', entier"><code>int</code></abbr> est elle aussi un entier.
+  Le resultat est alors affiche comme un entier, donc <code>2</code>.
+</p>
+
+<p>
+  Dans le 2eme cas, Kotlin interprete <code>1.0</code>
+  comme un <abbr title="nombre en notation scientifique">floating point</abbr>.
+  Il fait alors la somme et retourne <code>2.0</code>, qui est lui aussi un
+  <abbr title="Abreviation de 'floating point number'"><code>float</code></abbr> .
+  Jusque la, il n'y a pas de grande difference.
+</p>
+
+<p>
+  On voit un comportement similaire avec la division. Pour les entier c'est la partie entiere de la division, pour les
+  float c'est la division avec la partie decimale.
+</p>
+
+<pre class="prettyprint">
+  <code class="java"><span class="play">79/2</span>
+<span class="eq">39</span>
+
+<span class="play">79.0/2.0</span>
+<span class="eq">39.5</span></code>
+</pre>
+
+<h2>Les chaines de characteres</h2>
+
+<p>
+  Les <abbr title="Chaine de charactere en Anglais. A quoi pensais-tu? :)"><code>string</code></abbr>
+  sont le type de donnees utilise pour representer du texte.
+  Parce qu'il sagit de texte, on ne va pas pouvoir faire les memes operations qu'avec des entiers.
+  L'operation la plus courante avec les strings est la concatenation. Pour ca on utilise l'operateur <code>+</code>.
+</p>
+
+<pre>
+  <code class="java"><span class="play">"La vache qui rit, " + "a moitie dans ton lit"</span>
+<span class="eq">"La vache qui rit, a moitie dans ton lit"</span></code>
+</pre>
+
+<p>
+  Ce <code>+</code> est different du <code>+</code> de l'addition
+  parce qu'il s'applique sur une <code>string</code> et <code>autre chose</code>.
+  Heureusement en Kotlin cette autre chose peut etre n'importe quelle valeur.
+  Kotlin va toujours se debrouiller pour representer textuellement un element.
+</p>
+
+<pre class="prettyprint">
+  <code class="java"><span class="play">"1 + 1 = " + ( 1 + 1 )</span>
+<span class="eq">1 + 1 = 2</span></code>
+</pre>
+
+
+<h2>Les variables et les types</h2>
+
+<p>
+  Pour savoir ce que l'on a et ce que l'on peut faire avec une variable, ces dernieres sont typees.
+  Cela veut dire que pour chaque variable ou valeur declarer,
+  on lui associe une 2eme information qui est ce que la variable represente.
+</p>

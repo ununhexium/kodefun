@@ -13,7 +13,9 @@
 		<script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/main.js"></script>
 		<script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/backToTop.js"></script>
 		<script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/highlight.pack.js"></script>
-		<script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/readingTime.js"></script>
+        <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/readingTime.js"></script>
+        <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/youtube-embed.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 
 		<#if (config.site_disqus_shortname?has_content)>
 			<script id="dsq-count-scr" src="//${config.site_disqus_shortname}.disqus.com/count.js" async></script>

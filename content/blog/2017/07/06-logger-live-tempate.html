@@ -1,0 +1,43 @@
+title=Comment ajouter un logger en 5 touches ?
+date=2017-07-06
+type=post
+tags=blog,java,template
+status=published
+categories=tips
+author=Just Me
+~~~~~~
+
+<h1>Logger live template</h1>
+
+<p>
+  En java, il arrive souvent de vouloir rajouter un logger a une classe. Le probleme de cet ajout c'est qu'il prend
+  une ligne complete et du temps, meme avec la completion automatique.
+</p>
+
+<h2>Solution: ce live template.</h2>
+
+<pre class="prettyprint">
+<code>private static final Logger LOG =
+  java.util.logging.Logger.getLogger($CLASS$.class.getCanonicalName());
+$END$
+</code>
+</pre>
+
+
+<p>The value for the CLASS variable:</p>
+<pre><code>className()</code></pre>
+
+
+<p>
+  Il n'y a plus qu'a taper <code>log</code> et <code>Entree</code> deux foix
+  dans le code source pour declarer ce logger.
+</p>
+
+
+<div class="youtube-video-frame">
+  <div class="youtube"
+       id="irDovtAT-Lg"
+       data-params="vq=hd720"
+       style="width: 853px; height: 480px;">
+  </div>
+</div>

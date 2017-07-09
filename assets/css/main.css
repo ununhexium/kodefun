@@ -1576,17 +1576,27 @@
 
 	pre {
 		-webkit-overflow-scrolling: touch;
-		font-family: "Courier New", monospace;
+		font-family: "Consolas", monospace;
 		font-size: 0.9em;
-		margin: 0 0 2em 0;
+		margin: 0 0 0 0;
+		padding: 0;
 	}
 
-		pre code {
-			display: block;
-			line-height: 1.75em;
-			padding: 1em 1.5em;
-			overflow-x: auto;
-		}
+    pre span.play::before {
+        content: url('../img/blog/ij/repl-play.png');
+		display:inline-block;
+		min-width: 24px;
+		margin-right: 1em;
+		text-align: center;
+    }
+
+    pre span.eq::before {
+        content: url('../img/blog/ij/repl-eq.png');
+		display:inline-block;
+		min-width: 24px;
+		margin-right: 1em;
+		text-align: center;
+    }
 
 	hr {
 		border: 0;

@@ -1,0 +1,54 @@
+title=Comment exécuter du code Kotlin sans fichier ?
+date=2017-06-27
+type=post
+tags=blog
+status=published
+categories=course module0
+author=Just Me
+~~~~~~
+
+<h1>L'interpréteur</h1>
+
+<p>
+    IntelliJ dispose d'un <abbr title="Read–Eval–Print Loop">REPL</abbr>.
+    Il s'agit d'un programme qui va lire une ligne de code puis l'executer immédiatement.
+    C'est ce que nous allons utiliser pour commencer a decouvrir la programmation.
+</p>
+
+<p>
+    Dans IntelliJ, aller dans <code>Tools > Kotlin > Kotlin REPL</code>.
+    Une fenetre s'ouvre en bas de l'IDE.
+    Vous pouvez y taper les commandes que vous voulez,
+    puis faire <span class="shortcut">Ctrl + Entree</span> pour l'executer.
+    Vous pouvez par exemple l'utiliser comme un calculatrice.
+</p>
+
+<pre class="prettyprint">
+<code>1+1
+2
+
+1.0+1.0
+2.0
+
+79/2
+39
+
+79.0/2.0
+39.5
+</code>
+</pre>
+
+<p>
+    Ou y ecrire du texte.
+</p>
+
+<pre class="prettyprint">
+  <code class=""java>println("Have fun! :)")</code>
+  <code>Have fun! :)</code>
+</pre>
+
+<p>
+  Vous vous demandez pourquoi les resultats sont differents selon que l'on ecrit
+  <code>1 + 1</code> ou <code>1.0 + 1.0</code> ?
+  C'est parce qu'il s'agit de <a href="29-types.html">types de donnees</a> differents.
+</p>
