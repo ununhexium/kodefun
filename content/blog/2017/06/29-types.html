@@ -1,4 +1,4 @@
-title=Comment savoir ce qu'est ma variable?
+title=C'est quoi ce truc?
 date=2017-06-29
 type=post
 tags=kotlin,type
@@ -7,7 +7,31 @@ categories=blog
 author=Just Me
 ~~~~~~
 
-<h1>Types de donnees</h1>
+<p>
+  Lorsque l'on code, on aime bien savoir ce qu'on a dans les mains.
+  Programmer c'est souvent suivre des recettes de cuisine et reutiliser les recettes des autres.
+  Encore faut-il savoir quels ingredients utiliser et savoir quels ingredients on a a disposition.
+</p>
+
+<p>
+  Est ce que je peux faire un calcul avec ca,
+  est ce que je peux l'afficher,
+  est ce que ca va exploser si j'ai met le feu ?
+  Autant de questions auquelles le typage de donnees va tenter de repondre.
+</p>
+
+<h1>Les types de donnees</h1>
+
+<p>
+  Il existe une tres grande variete de types de donnees differents.
+  Pour etre plus precis, il y en a plusieurs milliers fournies en standard avec Kotlin
+  et des dizaines de milliers d'autres provenants de contributeurs.
+  Cette variete est permise grace a l'intercompatibilite de Kotlin avec Java
+  qui permet de reutiliser tout le code java deja existant.
+  Encore une fois, c'est juste une boite a outils.
+  Ca ne sert a rien de tous les connaitres et nous verrons plus tard comment s'en servir.
+  Revenons donc a nos <s>moutons</s> types.
+</p>
 
 <p>
   Reprenons les exemples vus avec le <a href="27-REPL.html">REPL</a>.
@@ -25,7 +49,7 @@ author=Just Me
 
 <p>
   Pour l'addition, on peut voir deux comportements differents.
-  Ils correspondent a deux types de donnees differentes.
+  Ils correspondent a deux types de donnees differents.
 </p>
 
 <p>
@@ -48,11 +72,11 @@ author=Just Me
 </p>
 
 <pre class="prettyprint">
-  <code class="java"><span class="play">79/2</span>
-<span class="eq">39</span>
+  <code class="java"><span class="play">9/2</span>
+<span class="eq">9</span>
 
-<span class="play">79.0/2.0</span>
-<span class="eq">39.5</span></code>
+<span class="play">9.0/2.0</span>
+<span class="eq">4.5</span></code>
 </pre>
 
 <h2>Les chaines de characteres</h2>
@@ -64,8 +88,8 @@ author=Just Me
   L'operation la plus courante avec les strings est la concatenation. Pour ca on utilise l'operateur <code>+</code>.
 </p>
 
-<pre>
-  <code class="java"><span class="play">"La vache qui rit, " + "a moitie dans ton lit"</span>
+<pre class="prettyprint">
+  <code class="java"><span class="play">"La vache qui rit" + ", a moitie dans ton lit"</span>
 <span class="eq">"La vache qui rit, a moitie dans ton lit"</span></code>
 </pre>
 
@@ -81,11 +105,29 @@ author=Just Me
 <span class="eq">1 + 1 = 2</span></code>
 </pre>
 
+<h3>Les booleens</h3>
+
+<p>
+  Les <a href="https://en.wikipedia.org/wiki/George_Boole">booleens</a> sont le type de donnees le plus simple.
+  Un <code>Boolean</code> peut etre soit vrai, soit faux.
+  C'est ce type de donnees qui est utilise en logique, avec les operateurs
+<ul>
+  <li><code>&&</code>, <abbr title="et">and</abbr></li>
+  <li><code>||</code>, <abbr title="ou">or</abbr></li>
+  <li><code>==</code>, <abbr title="egal">equals</abbr></li>
+</ul>
+
+</p>
 
 <h2>Les variables et les types</h2>
 
 <p>
   Pour savoir ce que l'on a et ce que l'on peut faire avec une variable, ces dernieres sont typees.
-  Cela veut dire que pour chaque variable ou valeur declarer,
+  Cela veut dire que pour chaque variable ou valeur declaree,
   on lui associe une 2eme information qui est ce que la variable represente.
+  Cela permet deux choses essentielles:
+<ul>
+  <li>Ca permet a Kotlin de verifier avant meme l'execution qu'on donne le type demande</li>
+  <li>Ca permet a IntelliJ d'informer le developpeur a propos du type de donnees qui peut etre utilise</li>
+</ul>
 </p>
