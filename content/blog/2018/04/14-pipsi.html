@@ -4,7 +4,7 @@ last_updated=2018-04-14
 type=post
 tags=python pip
 status=published
-categories=
+categories=tools python
 author=Just Me
 ~~~~~~
 
@@ -26,41 +26,35 @@ author=Just Me
 </p>
 
 <pre>
-    <code>
-        alias pipsi="python3 -m pipsi --home $WORKON_HOME"
-    </code>
+    <code>alias pipsi="python3 -m pipsi --home $WORKON_HOME"</code>
 </pre>
 
 <h2>Usage</h2>
 
+<p>Let's install glances.</p>
+
 <pre>
-    <code>
-        pipsi install glances
-    </code>
+    <code>pipsi install glances</code>
 </pre>
 
 <p>It will now create a new virtualenv and add a symlink in
-<code>$HOME/.local/bin/glances</code></p>
+<code>$HOME/.local/bin/glances</code>.</p>
 <p>
 <code>glances</code> can now be started on the CLI.</p>
 <p>
   If we want to run glances with its web server, we also need bottle.
-  It was not installed by pipsi but that's an easy fix.
+  It was not installed by <code>pipsi</code> but that's an easy fix.
 </p>
 
 <pre>
-    <code>
-        workon glances
-        pip install bottle
-        deactivate
-    </code>
+    <code>workon glances
+pip install bottle
+deactivate</code>
 </pre>
 
-<p>Glances can now be run in web server mode with</p>
+<p><code>glances</code> can now be run in web server mode with</p>
 
 <pre>
-    <code>
-        glances -w
-    </code>
+    <code>glances -w</code>
 </pre>
 
