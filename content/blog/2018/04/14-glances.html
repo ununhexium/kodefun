@@ -1,0 +1,66 @@
+title=pipsi
+date=2018-04-14
+last_updated=2018-04-14
+type=post
+tags=python pip
+status=published
+categories=
+author=Just Me
+~~~~~~
+
+<p>A tool to install each python based tool in its own environment quickly and easily.</p>
+
+<h2>Installation</h2>
+
+<p>Install pipsi from PyPi using Python 3.</p>
+
+<pre class="prettyprint">
+<code>python3 -m pip install pipsi</code>
+</pre>
+
+<h2>Configuration</h2>
+
+<p>
+  <code>pipsi</code> will not default to using the same virtual environment folder as the one configured for
+  <code>virtualenvwrapper</code>. Assuming your already setup <code>virtualenvwrapper</code>:
+</p>
+
+<pre>
+    <code>
+        alias pipsi="python3 -m pipsi --home $WORKON_HOME"
+    </code>
+</pre>
+
+<h2>Usage</h2>
+
+<pre>
+    <code>
+        pipsi install glances
+    </code>
+</pre>
+
+<p>It will now create a new virtualenv and add a symlink in
+<code>$HOME/.local/bin/glances</code></p>
+<p>
+<code>glances</code> can now be started on the CLI.</p>
+<p>
+  If we want to run glances with its web server, we also need bottle.
+  It was not installed by pipsi but that's an easy fix.
+</p>
+
+<pre>
+    <code>
+        workon glances
+        pip install bottle
+        deactivate
+    </code>
+</pre>
+
+<p>Glances can now be run in web server mode with</p>
+
+<pre>
+    <code>
+        glances -w
+    </code>
+</pre>
+
