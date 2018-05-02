@@ -1,0 +1,78 @@
+title=
+date=2018-04-21
+last_updated=2018-04-21
+type=post
+tags=ANTLR,parser,Kotlin
+status=published
+categories=
+author=Ununhexium
+~~~~~~
+
+<h1>Naeloob</h1>
+
+<p>
+  Last year, I had to deal with a query language that was quite esoteric.
+  I had to evaluate the queries against XML documents and here is what it looked like.
+  The names and exact values have been changed but the essence of how it is structured is kept.
+</p>
+
+<h2>A Dwarf story</h2>
+
+<a href="#skipLore">Skip the Lore.</a>
+
+<p>
+  Imagine a dwarf community, among the miners, brewers, farmers and noble people is
+  one special dwarf, the One, selected by the Gods, to become the <strong>Oracle</strong>.
+  He is the only one who will be able to speak the language of dwarfs
+  Gods and here is his journey to learn that language.
+</p>
+
+<p>
+  The Gods demand requests and answers to be in a very uncommon language.
+  Each answer is a long song which the old books tell you how to listen to.
+  Here is how the book describes how to know if it's raining right now.
+  The query must be formulated like so before beeing evaluated:
+</p>
+
+<ul>
+  <li>One word to designate the weather</li>
+  <li>A double equal sign, which dwarfs write <code>#</code></li>
+  <li>The value to compare the object with</li>
+</ul>
+
+<p>An example of such query is</p>
+
+<pre><code>KAPAR#FLOOSH</code></pre>
+
+<p>
+  KAPAR is the Godly word for weather, as the chosen one found in dusty documents his predecessor
+  left in the study he sits right now.
+  He always wondered where they went... but it's okay, they left that dictionary of Godly words.
+</p>
+
+<p>
+  The Oracle, who happens to also know a bit about a new dwarf technology called the Komputer.
+  So he decides to translate the songs to text and evaluate this text with a custom parser.
+</p>
+
+<h2 id="skipLore">ANTLR</h2>
+
+<p>
+  ANTLR is a parser generator written in Java. It can generate code for several languages among which, Java.
+  We are going to use it to build the query's parser.
+</p>
+
+<p>
+  <a href="https://github.com/ununhexium/naeloob2/tree/initial">This repository</a>
+  contains the initial project.
+  I'm going to use in this article.
+  It's running with Gradle, JUnit5, IntelliJ, ANTLR 4.7, ANTLR plugin for IntelliJ.
+  Feel free to reuse it if you don't want to do your own setup.
+</p>
+
+<h2>The Grammar</h2>
+
+<p>
+  ANTLR parses grammar files (.g4) to generate the parser's source code we can use in our code.
+</p>
+
